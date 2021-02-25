@@ -12,6 +12,9 @@ const download = require("download-git-repo");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const handlebars = require("handlebars");
+const ora = require("ora");
+const chalk = require("chalk");
+const logSymbols = require('log-symbols');
 
 const templetes = {
   "tpl-a": {
@@ -38,12 +41,13 @@ program
   .description("初始化项目模板")
   .action((templateName, projectName) => {
     //根据templateName下载对应的模板到本地并起名为 projectName
+    // const spinner =  ora('开始下载模板').start();
 
     //优化：判断项目名是否存在 如果存在的话 把之前的删除 否则新建
     fs.exists(`./${projectName}`, (exists) => {
       if (exists) {
-        let path = `./${projectName}`
-        deleteall(path)
+        let path = `./${projectName}`;
+        deleteall(path);
       }
     });
 
@@ -54,8 +58,11 @@ program
       { clone: true },
       function (err) {
         if (err) {
-          return "下载失败";
+          // spinner.fail()
+          return;
         } else {
+          // spinner.succeed()
+
           //使用inquirer对用户的输入进行向导
           inquirer
             .prompt([
@@ -98,7 +105,7 @@ program
                 `${projectName}/package.json`,
                 packageNewContent
               );
-              console.log(`初始化模板${templateName}成功`);
+              console.log(logSymbols.success,chalk.green(`初始化模板${templateName}成功`));
             })
             .catch((error) => {
               if (error.isTtyError) {

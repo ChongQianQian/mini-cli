@@ -1,5 +1,5 @@
 {
-  "name": "mini-cli",
+  "name": "pro2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,12 +21,8 @@
   },
   "homepage": "https://github.com/ChongQianQian/mini-cli#readme",
   "dependencies": {
-    "chalk": "^4.1.0",
     "commander": "^7.1.0",
     "download-git-repo": "^3.0.2",
-    "handlebars": "^4.7.7",
-    "inquirer": "^7.3.3",
-    "log-symbols": "^4.0.0",
-    "ora": "^5.3.0"
+    "inquirer": "^7.3.3"
   }
 }

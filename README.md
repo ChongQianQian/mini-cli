@@ -93,3 +93,58 @@ const packageNewContent = handlebars.compile(packageContent)(answers);
 // packageContent中对应的向导关键字 需要用{{name}}
 // 然后在控制台中输入：min tpl-a proname
 ```
+
+#### 优化：ora
+> 优秀的终端加载提示
+[官方地址](https://github.com/sindresorhus/ora)
+
+```bash
+npm install ora
+```
+
+```js
+const ora = require('ora');
+
+const spinner = ora('Loading unicorns').start();
+
+setTimeout(() => {
+	spinner.color = 'yellow';
+	spinner.text = 'Loading rainbows';
+}, 1000);
+```
+
+#### 优化chalk：添加颜色
+```bash
+npm install chalk  
+```
+
+```js
+const chalk = require('chalk');
+//chalk[样式关键字_1][样式关键字_2](输出内容)
+
+chalk.green(' √ ' )
+chalk.yellow(' ∆ ' )
+chalk.chalk.bold.red(' X ' )
+chalk.cyan(' [test] ')
+```
+#### 优化：图标提示log-symbols
+[npm地址](https://www.npmjs.com/package/log-symbols)
+```bash
+npm install log-symbols
+```
+```js
+const logSymbols = require('log-symbols');
+ 
+console.log(logSymbols.success, 'Finished successfully!');
+```
+
+
+### npm发包
+1.注册npm账号
+2.检索npm包是否重复
+3.将package.json中的name为发布的包名:mini
+4.控制台：npm login 登陆npm
+5.执行 npm publish
+6.使用包 npm install --global mini
+7.npm unlink mini //开始使用
+8.mini -h
