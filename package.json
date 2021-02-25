@@ -1,0 +1,27 @@
+{
+  "name": "mini-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChongQianQian/mini-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "mini": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/ChongQianQian/mini-cli/issues"
+  },
+  "homepage": "https://github.com/ChongQianQian/mini-cli#readme",
+  "dependencies": {
+    "commander": "^7.1.0",
+    "download-git-repo": "^3.0.2"
+  }
+}
