@@ -138,6 +138,15 @@ const logSymbols = require('log-symbols');
 console.log(logSymbols.success, 'Finished successfully!');
 ```
 
+#### mustache.js--模板引擎
+> mustache.js！一个有灵魂的模板引擎
+> 装了相关的mustache的插件，所以语法会有提示;
+> 在模板文件中使用{{}}来执行渲染
+
+```bash
+npm i mustache -s -d
+```
+**示例**：在同文件studyMustache下是对mustache.js的功能测试，其他地方并未用到，只是了解一下；
 
 ### npm发包
 1.注册npm账号

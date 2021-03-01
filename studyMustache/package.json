@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "mustache dataView.json myTemplate.mustache>/Users/edz/Desktop/github项目/个人项目/不常用/mini-cli/studyMustache/output.html"
+  },
+  "dependencies": {
+    "mustache": "^4.1.0"
+  }
+}
